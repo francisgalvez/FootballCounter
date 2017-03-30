@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rm_dimen">85dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="marcador_size">75sp</dimen>
+    <dimen name="marcador_height">160dp</dimen>
+    <dimen name="ball_margin">10dp</dimen>
+    <dimen name="fcb_image">78dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="marginLeftButtons">10dp</dimen>
+    <dimen name="marginLeftMenu">20dp</dimen>
+    <dimen name="marginRightMenu">30dp</dimen>
+    <dimen name="statisticsNumberText">20sp</dimen>
+    <dimen name="statisticsNameText">14sp</dimen>
+</resources>

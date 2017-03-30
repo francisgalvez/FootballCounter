@@ -6,6 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    TextView goalsView;
+    TextView shotsView;
+    TextView outsideView;
+    TextView cornersView;
+    TextView ycardsView;
+    TextView rcardsView;
 
     Team realmadrid = new Team("Real Madrid CF");
     Team barcelona = new Team("FC Barcelona");
@@ -22,48 +28,48 @@ public class MainActivity extends AppCompatActivity {
      * Displays Real Madrid's goals
      */
     public void displayRealMadridGoals() {
-        TextView scoreView = (TextView) findViewById(R.id.real_madrid_goals);
-        scoreView.setText(String.valueOf(realmadrid.getGoals()));
+        goalsView = (TextView) findViewById(R.id.real_madrid_goals);
+        goalsView.setText(String.valueOf(realmadrid.getGoals()));
     }
 
     /**
      * Displays Real Madrid's shots
      */
     public void displayRealMadridShots() {
-        TextView scoreView = (TextView) findViewById(R.id.real_madrid_shots);
-        scoreView.setText(String.valueOf(realmadrid.getShots()));
+        shotsView = (TextView) findViewById(R.id.real_madrid_shots);
+        shotsView.setText(String.valueOf(realmadrid.getShots()));
     }
 
     /**
      * Displays Real Madrid's outsides
      */
     public void displayRealMadridOutsides() {
-        TextView scoreView = (TextView) findViewById(R.id.real_madrid_outsides);
-        scoreView.setText(String.valueOf(realmadrid.getOutsides()));
+        outsideView = (TextView) findViewById(R.id.real_madrid_outsides);
+        outsideView.setText(String.valueOf(realmadrid.getOutsides()));
     }
 
     /**
      * Displays Real Madrid's corners
      */
     public void displayRealMadridCorners() {
-        TextView scoreView = (TextView) findViewById(R.id.real_madrid_corners);
-        scoreView.setText(String.valueOf(realmadrid.getCorners()));
+        cornersView = (TextView) findViewById(R.id.real_madrid_corners);
+        cornersView.setText(String.valueOf(realmadrid.getCorners()));
     }
 
     /**
      * Displays Real Madrid's yellow cards
      */
     public void displayRealMadridYellowCards() {
-        TextView scoreView = (TextView) findViewById(R.id.real_madrid_ycards);
-        scoreView.setText(String.valueOf(realmadrid.getYellowCards()));
+        ycardsView = (TextView) findViewById(R.id.real_madrid_ycards);
+        ycardsView.setText(String.valueOf(realmadrid.getYellowCards()));
     }
 
     /**
      * Displays Real Madrid's red cards
      */
     public void displayRealMadridRedCards() {
-        TextView scoreView = (TextView) findViewById(R.id.real_madrid_rcards);
-        scoreView.setText(String.valueOf(realmadrid.getRedCards()));
+        rcardsView = (TextView) findViewById(R.id.real_madrid_rcards);
+        rcardsView.setText(String.valueOf(realmadrid.getRedCards()));
     }
 
     /**

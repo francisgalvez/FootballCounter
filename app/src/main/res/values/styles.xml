@@ -8,4 +8,84 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Marcador">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/marcador_size</item>
+        <item name="android:text">@string/zero</item>
+    </style>
+
+    <style name="AlignTopLeft">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BallButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:src">@drawable/bll</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Menu">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/marginLeftMenu</item>
+        <item name="android:layout_marginRight">@dimen/marginRightMenu</item>
+    </style>
+
+    <style name="MenuButtonsLeft" parent="WrapContent">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">@dimen/marginLeftButtons</item>
+    </style>
+
+    <style name="MenuButtonsRight" parent="WrapContent">
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="AllText" parent="WrapContent">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ScoreLeftText" parent="AllText">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/marginLeftMenu</item>
+        <item name="android:text">@string/zero</item>
+        <item name="android:textSize">@dimen/statisticsNumberText</item>
+    </style>
+
+    <style name="ScoreRightText" parent="AllText">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/marginLeftMenu</item>
+        <item name="android:text">@string/zero</item>
+        <item name="android:textSize">@dimen/statisticsNumberText</item>
+    </style>
+
+    <style name="CentreText" parent="AllText">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/statisticsNameText</item>
+    </style>
+
+    <style name="ResetMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/marginLeftMenu</item>
+        <item name="android:layout_marginRight">@dimen/marginLeftMenu</item>
+    </style>
+
+    <style name="ResetButton" parent="WrapContent">
+        <item name="android:text">@string/reset</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/bar</item>
+    </style>
+
 </resources>
