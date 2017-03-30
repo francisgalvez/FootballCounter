@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FootballCounter</string>
+    <string name="realMadrid">Real Madrid CF</string>
+    <string name="barcelona">FC Barcelona</string>
+    <string name="goals">Add a goal by clicking one of these buttons</string>
+    <string name="shots">shots</string>
+    <string name="ycards">yellow cards</string>
+    <string name="redcards">red cards</string>
+    <string name="offsides">offsides</string>
+    <string name="corners">corners</string>
+    <string name="zero">0</string>
+    <string name="separator">-</string>
+    <string name="reset">reset</string>
+    <string name="reset_text">Click here to reset team statistics</string>
+</resources>
