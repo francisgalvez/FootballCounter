@@ -28,8 +28,8 @@
     </style>
 
     <style name="BallButton">
-        <item name="android:layout_width">60dp</item>
-        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">45dp</item>
         <item name="android:src">@drawable/bll</item>
         <item name="android:background">@android:color/transparent</item>
     </style>
@@ -41,12 +41,17 @@
         <item name="android:layout_marginRight">@dimen/marginRightMenu</item>
     </style>
 
-    <style name="MenuButtonsLeft" parent="WrapContent">
+    <style name="MenuButtons" parent="WrapContent">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">55dp</item>
+    </style>
+
+    <style name="MenuButtonsLeft" parent="MenuButtons">
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_marginLeft">@dimen/marginLeftButtons</item>
     </style>
 
-    <style name="MenuButtonsRight" parent="WrapContent">
+    <style name="MenuButtonsRight" parent="MenuButtons">
         <item name="android:layout_alignParentRight">true</item>
     </style>
 
@@ -81,7 +86,10 @@
         <item name="android:layout_marginRight">@dimen/marginLeftMenu</item>
     </style>
 
-    <style name="ResetButton" parent="WrapContent">
+    <style name="ResetButton">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_marginTop">5dp</item>
         <item name="android:text">@string/reset</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:layout_alignParentBottom">true</item>

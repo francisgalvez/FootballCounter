@@ -8,8 +8,8 @@
     <dimen name="fcb_image">78dp</dimen>
     <dimen name="margin_16">16dp</dimen>
     <dimen name="marginLeftButtons">10dp</dimen>
-    <dimen name="marginLeftMenu">20dp</dimen>
-    <dimen name="marginRightMenu">30dp</dimen>
+    <dimen name="marginLeftMenu">15dp</dimen>
+    <dimen name="marginRightMenu">25dp</dimen>
     <dimen name="statisticsNumberText">20sp</dimen>
     <dimen name="statisticsNameText">14sp</dimen>
 </resources>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgr">
+    android:background="@drawable/backgr"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/marcador"
@@ -86,8 +87,7 @@
             android:layout_height="@dimen/fcb_image"
             android:layout_alignParentRight="true"
             android:layout_margin="@dimen/margin_16"
-            android:src="@drawable/fcb"
-            />
+            android:src="@drawable/fcb" />
 
         <TextView
             android:id="@+id/fcb_text"
@@ -109,222 +109,233 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         style="@style/WrapContent"
         android:layout_below="@id/marcador"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <RelativeLayout
-            android:id="@+id/shots"
-            style="@style/Menu"
-            android:layout_marginTop="4dp">
-
-            <ImageButton
-                android:id="@+id/rm_shots_button"
-                style="@style/MenuButtonsLeft"
-                android:onClick="addShotForRealMadrid"
-                android:src="@drawable/bullseye1" />
-
-            <TextView
-                android:id="@+id/real_madrid_shots"
-                style="@style/ScoreLeftText"
-                android:layout_toEndOf="@id/rm_shots_button"
-                android:layout_toRightOf="@id/rm_shots_button"
-                android:fontFamily="sans-serif-light" />
-
-            <TextView
-                style="@style/CentreText"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/shots" />
-
-            <ImageButton
-                android:id="@+id/fcb_shots_button"
-                style="@style/MenuButtonsRight"
-                android:onClick="addShotForBarcelona"
-                android:src="@drawable/bullseye1" />
-
-            <TextView
-                android:id="@+id/barcelona_shots"
-                style="@style/ScoreRightText"
-                android:layout_toLeftOf="@id/fcb_shots_button"
-                android:fontFamily="sans-serif-light" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/corners"
-            style="@style/Menu"
-            android:layout_below="@id/shots"
+        <LinearLayout
+            style="@style/WrapContent"
+            android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <ImageButton
-                android:id="@+id/rm_corners_button"
-                style="@style/MenuButtonsLeft"
-                android:onClick="addCornerForRealMadrid"
-                android:src="@drawable/corner"
-                />
+            <RelativeLayout
+                android:id="@+id/shots"
+                style="@style/Menu"
+                android:layout_marginTop="4dp">
 
-            <TextView
-                android:id="@+id/real_madrid_corners"
-                style="@style/ScoreLeftText"
-                android:layout_toRightOf="@id/rm_corners_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/rm_shots_button"
+                    style="@style/MenuButtonsLeft"
+                    android:onClick="addShotForRealMadrid"
+                    android:src="@drawable/bullseye1" />
 
-            <TextView
-                style="@style/CentreText"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/corners" />
+                <TextView
+                    android:id="@+id/real_madrid_shots"
+                    style="@style/ScoreLeftText"
+                    android:layout_toEndOf="@id/rm_shots_button"
+                    android:layout_toRightOf="@id/rm_shots_button"
+                    android:fontFamily="sans-serif-light" />
 
-            <ImageButton
-                android:id="@+id/fcb_corners_button"
-                style="@style/MenuButtonsRight"
-                android:onClick="addCornerForBarcelona"
-                android:src="@drawable/corner" />
+                <TextView
+                    style="@style/CentreText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/shots" />
 
-            <TextView
-                android:id="@+id/barcelona_corners"
-                style="@style/ScoreRightText"
-                android:layout_toLeftOf="@id/fcb_corners_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/fcb_shots_button"
+                    style="@style/MenuButtonsRight"
+                    android:onClick="addShotForBarcelona"
+                    android:src="@drawable/bullseye1" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/barcelona_shots"
+                    style="@style/ScoreRightText"
+                    android:layout_toLeftOf="@id/fcb_shots_button"
+                    android:fontFamily="sans-serif-light" />
 
-        <RelativeLayout
-            android:id="@+id/yellow_cards"
-            style="@style/Menu"
-            android:layout_below="@id/corners"
-            tools:context=".MainActivity">
+            </RelativeLayout>
 
-            <ImageButton
-                android:id="@+id/rm_ycards_button"
-                style="@style/MenuButtonsLeft"
-                android:onClick="addYellowCardForRealMadrid"
-                android:src="@drawable/yellowc" />
+            <RelativeLayout
+                android:id="@+id/corners"
+                style="@style/Menu"
+                android:layout_below="@id/shots"
+                tools:context=".MainActivity">
 
-            <TextView
-                android:id="@+id/real_madrid_ycards"
-                style="@style/ScoreLeftText"
-                android:layout_toRightOf="@id/rm_ycards_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/rm_corners_button"
+                    style="@style/MenuButtonsLeft"
+                    android:onClick="addCornerForRealMadrid"
+                    android:src="@drawable/corner" />
 
-            <TextView
-                style="@style/CentreText"
-                android:layout_width="60dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/ycards" />
+                <TextView
+                    android:id="@+id/real_madrid_corners"
+                    style="@style/ScoreLeftText"
+                    android:layout_toRightOf="@id/rm_corners_button"
+                    android:fontFamily="sans-serif-light" />
 
-            <ImageButton
-                android:id="@+id/barcelona_ycards_button"
-                style="@style/MenuButtonsRight"
-                android:onClick="addYellowCardForBarcelona"
-                android:src="@drawable/yellowc" />
+                <TextView
+                    style="@style/CentreText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/corners" />
 
-            <TextView
-                android:id="@+id/barcelona_ycards"
-                style="@style/ScoreRightText"
-                android:layout_toLeftOf="@id/barcelona_ycards_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/fcb_corners_button"
+                    style="@style/MenuButtonsRight"
+                    android:onClick="addCornerForBarcelona"
+                    android:src="@drawable/corner" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/barcelona_corners"
+                    style="@style/ScoreRightText"
+                    android:layout_toLeftOf="@id/fcb_corners_button"
+                    android:fontFamily="sans-serif-light" />
 
-        <RelativeLayout
-            android:id="@+id/red_cards"
-            style="@style/Menu"
-            android:layout_below="@id/yellow_cards"
-            tools:context=".MainActivity">
+            </RelativeLayout>
 
-            <ImageButton
-                android:id="@+id/rm_rcards_button"
-                style="@style/MenuButtonsLeft"
-                android:onClick="addRedCardForRealMadrid"
-                android:src="@drawable/redcard" />
+            <RelativeLayout
+                android:id="@+id/yellow_cards"
+                style="@style/Menu"
+                android:layout_below="@id/corners"
+                tools:context=".MainActivity">
 
-            <TextView
-                android:id="@+id/real_madrid_rcards"
-                style="@style/ScoreLeftText"
-                android:layout_toRightOf="@id/rm_rcards_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/rm_ycards_button"
+                    style="@style/MenuButtonsLeft"
+                    android:onClick="addYellowCardForRealMadrid"
+                    android:src="@drawable/yellowc" />
 
-            <TextView
-                style="@style/CentreText"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/redcards" />
+                <TextView
+                    android:id="@+id/real_madrid_ycards"
+                    style="@style/ScoreLeftText"
+                    android:layout_toRightOf="@id/rm_ycards_button"
+                    android:fontFamily="sans-serif-light" />
 
-            <ImageButton
-                android:id="@+id/barcelona_rcards_button"
-                style="@style/MenuButtonsRight"
-                android:onClick="addRedCardForBarcelona"
-                android:src="@drawable/redcard" />
+                <TextView
+                    style="@style/CentreText"
+                    android:layout_width="60dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/ycards" />
 
-            <TextView
-                android:id="@+id/barcelona_rcards"
-                style="@style/ScoreRightText"
-                android:layout_toLeftOf="@id/barcelona_rcards_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/barcelona_ycards_button"
+                    style="@style/MenuButtonsRight"
+                    android:onClick="addYellowCardForBarcelona"
+                    android:src="@drawable/yellowc" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/barcelona_ycards"
+                    style="@style/ScoreRightText"
+                    android:layout_toLeftOf="@id/barcelona_ycards_button"
+                    android:fontFamily="sans-serif-light" />
 
-        <RelativeLayout
-            android:id="@+id/outsides"
-            style="@style/Menu"
-            android:layout_below="@id/red_cards"
-            tools:context=".MainActivity">
+            </RelativeLayout>
 
-            <ImageButton
-                android:id="@+id/rm_outsides_button"
-                style="@style/MenuButtonsLeft"
-                android:onClick="addOutsideForRealMadrid"
-                android:src="@drawable/outside1" />
+            <RelativeLayout
+                android:id="@+id/red_cards"
+                style="@style/Menu"
+                android:layout_below="@id/yellow_cards"
+                tools:context=".MainActivity">
 
-            <TextView
-                android:id="@+id/real_madrid_outsides"
-                style="@style/ScoreLeftText"
-                android:layout_toRightOf="@id/rm_outsides_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/rm_rcards_button"
+                    style="@style/MenuButtonsLeft"
+                    android:onClick="addRedCardForRealMadrid"
+                    android:src="@drawable/redcard" />
 
-            <TextView
-                style="@style/CentreText"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/offsides" />
+                <TextView
+                    android:id="@+id/real_madrid_rcards"
+                    style="@style/ScoreLeftText"
+                    android:layout_toRightOf="@id/rm_rcards_button"
+                    android:fontFamily="sans-serif-light" />
 
-            <ImageButton
-                android:id="@+id/barcelona_outsides_button"
-                style="@style/MenuButtonsRight"
-                android:onClick="addOutsideForBarcelona"
-                android:src="@drawable/outside1" />
+                <TextView
+                    style="@style/CentreText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/redcards" />
 
-            <TextView
-                android:id="@+id/barcelona_outsides"
-                style="@style/ScoreRightText"
-                android:layout_toLeftOf="@id/barcelona_outsides_button"
-                android:fontFamily="sans-serif-light" />
+                <ImageButton
+                    android:id="@+id/barcelona_rcards_button"
+                    style="@style/MenuButtonsRight"
+                    android:onClick="addRedCardForBarcelona"
+                    android:src="@drawable/redcard" />
 
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/reset"
-            style="@style/ResetMenu"
-            tools:context=".MainActivity">
+                <TextView
+                    android:id="@+id/barcelona_rcards"
+                    style="@style/ScoreRightText"
+                    android:layout_toLeftOf="@id/barcelona_rcards_button"
+                    android:fontFamily="sans-serif-light" />
 
-            <Button
-                style="@style/ResetButton"
-                android:layout_alignParentLeft="true"
-                android:onClick="resetRealMadrid" />
+            </RelativeLayout>
 
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/reset_text"
-                android:textColor="@color/white" />
+            <RelativeLayout
+                android:id="@+id/outsides"
+                style="@style/Menu"
+                android:layout_below="@id/red_cards"
+                tools:context=".MainActivity">
 
-            <Button
-                style="@style/ResetButton"
-                android:layout_alignParentRight="true"
-                android:onClick="resetBarcelona"/>
+                <ImageButton
+                    android:id="@+id/rm_outsides_button"
+                    style="@style/MenuButtonsLeft"
+                    android:onClick="addOutsideForRealMadrid"
+                    android:src="@drawable/outside1" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/real_madrid_outsides"
+                    style="@style/ScoreLeftText"
+                    android:layout_toRightOf="@id/rm_outsides_button"
+                    android:fontFamily="sans-serif-light" />
 
-    </LinearLayout>
+                <TextView
+                    style="@style/CentreText"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/offsides" />
+
+                <ImageButton
+                    android:id="@+id/barcelona_outsides_button"
+                    style="@style/MenuButtonsRight"
+                    android:onClick="addOutsideForBarcelona"
+                    android:src="@drawable/outside1" />
+
+                <TextView
+                    android:id="@+id/barcelona_outsides"
+                    style="@style/ScoreRightText"
+                    android:layout_toLeftOf="@id/barcelona_outsides_button"
+                    android:fontFamily="sans-serif-light" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/reset"
+                style="@style/ResetMenu"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:id="@+id/reset_button_rm"
+                    style="@style/ResetButton"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="resetRealMadrid" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="@id/reset_button_fcb"
+                    android:layout_alignParentRight="@id/reset_button_rm"
+                    android:layout_centerInParent="true"
+                    android:text="@string/reset_text"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/reset_button_fcb"
+                    style="@style/ResetButton"
+                    android:layout_alignParentRight="true"
+                    android:onClick="resetBarcelona" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
