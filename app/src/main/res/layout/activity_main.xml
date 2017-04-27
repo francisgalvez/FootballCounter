@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/rm_text"
             style="@style/WrapContent"
-            android:layout_above="@+id/BallButton"
+            android:layout_above="@+id/ball_button_rm"
             android:layout_alignLeft="@+id/rm_image"
             android:layout_alignStart="@+id/rm_image"
             android:fontFamily="sans-serif-medium"
@@ -63,13 +63,13 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/BallButton"
+            android:id="@+id/ball_button_rm"
             style="@style/BallButton"
             android:layout_alignLeft="@id/rm_image"
             android:layout_alignStart="@id/rm_image"
             android:layout_below="@+id/fcb_text"
             android:layout_marginLeft="@dimen/ball_margin"
-            android:onClick="addGoalForRealMadrid" />
+            android:onClick="onClick" />
 
         <TextView
             android:id="@+id/textView"
@@ -100,12 +100,13 @@
             android:textColor="@color/white" />
 
         <ImageButton
+            android:id="@+id/ball_button_fcb"
             style="@style/BallButton"
             android:layout_alignEnd="@+id/fcb_image"
             android:layout_alignRight="@+id/fcb_image"
             android:layout_below="@+id/fcb_text"
             android:layout_marginRight="@dimen/ball_margin"
-            android:onClick="addGoalForBarcelona" />
+            android:onClick="onClick" />
 
     </RelativeLayout>
 
@@ -129,7 +130,7 @@
                 <ImageButton
                     android:id="@+id/rm_shots_button"
                     style="@style/MenuButtonsLeft"
-                    android:onClick="addShotForRealMadrid"
+                    android:onClick="onClick"
                     android:src="@drawable/bullseye1" />
 
                 <TextView
@@ -147,7 +148,7 @@
                 <ImageButton
                     android:id="@+id/fcb_shots_button"
                     style="@style/MenuButtonsRight"
-                    android:onClick="addShotForBarcelona"
+                    android:onClick="onClick"
                     android:src="@drawable/bullseye1" />
 
                 <TextView
@@ -167,7 +168,7 @@
                 <ImageButton
                     android:id="@+id/rm_corners_button"
                     style="@style/MenuButtonsLeft"
-                    android:onClick="addCornerForRealMadrid"
+                    android:onClick="onClick"
                     android:src="@drawable/corner" />
 
                 <TextView
@@ -184,7 +185,7 @@
                 <ImageButton
                     android:id="@+id/fcb_corners_button"
                     style="@style/MenuButtonsRight"
-                    android:onClick="addCornerForBarcelona"
+                    android:onClick="onClick"
                     android:src="@drawable/corner" />
 
                 <TextView
@@ -204,7 +205,7 @@
                 <ImageButton
                     android:id="@+id/rm_ycards_button"
                     style="@style/MenuButtonsLeft"
-                    android:onClick="addYellowCardForRealMadrid"
+                    android:onClick="onClick"
                     android:src="@drawable/yellowc" />
 
                 <TextView
@@ -222,7 +223,7 @@
                 <ImageButton
                     android:id="@+id/barcelona_ycards_button"
                     style="@style/MenuButtonsRight"
-                    android:onClick="addYellowCardForBarcelona"
+                    android:onClick="onClick"
                     android:src="@drawable/yellowc" />
 
                 <TextView
@@ -242,7 +243,7 @@
                 <ImageButton
                     android:id="@+id/rm_rcards_button"
                     style="@style/MenuButtonsLeft"
-                    android:onClick="addRedCardForRealMadrid"
+                    android:onClick="onClick"
                     android:src="@drawable/redcard" />
 
                 <TextView
@@ -259,7 +260,7 @@
                 <ImageButton
                     android:id="@+id/barcelona_rcards_button"
                     style="@style/MenuButtonsRight"
-                    android:onClick="addRedCardForBarcelona"
+                    android:onClick="onClick"
                     android:src="@drawable/redcard" />
 
                 <TextView
@@ -279,7 +280,7 @@
                 <ImageButton
                     android:id="@+id/rm_outsides_button"
                     style="@style/MenuButtonsLeft"
-                    android:onClick="addOutsideForRealMadrid"
+                    android:onClick="onClick"
                     android:src="@drawable/outside1" />
 
                 <TextView
@@ -296,7 +297,7 @@
                 <ImageButton
                     android:id="@+id/barcelona_outsides_button"
                     style="@style/MenuButtonsRight"
-                    android:onClick="addOutsideForBarcelona"
+                    android:onClick="onClick"
                     android:src="@drawable/outside1" />
 
                 <TextView
@@ -316,12 +317,12 @@
                     android:id="@+id/reset_button_rm"
                     style="@style/ResetButton"
                     android:layout_alignParentLeft="true"
-                    android:onClick="resetRealMadrid" />
+                    android:onClick="onClick" />
 
                 <TextView
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="@id/reset_button_fcb"
+                    android:layout_alignParentLeft="@+id/reset_button_fcb"
                     android:layout_alignParentRight="@id/reset_button_rm"
                     android:layout_centerInParent="true"
                     android:text="@string/reset_text"
@@ -331,7 +332,7 @@
                     android:id="@+id/reset_button_fcb"
                     style="@style/ResetButton"
                     android:layout_alignParentRight="true"
-                    android:onClick="resetBarcelona" />
+                    android:onClick="onClick" />
 
             </RelativeLayout>
 

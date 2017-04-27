@@ -1,5 +1,6 @@
 package com.example.android.footballcounter;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -72,66 +73,90 @@ public class MainActivity extends AppCompatActivity {
         rcardsView.setText(String.valueOf(realmadrid.getRedCards()));
     }
 
-    /**
-     * Adds one goal for Real Madrid
-     */
-    public void addGoalForRealMadrid(View view){
-        realmadrid.addGoal();
-        this.displayRealMadridGoals();
-    }
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ball_button_rm:
+                realmadrid.addGoal();
+                this.displayRealMadridGoals();
+                break;
 
-    /**
-     * Adds one shot for Real Madrid
-     */
-    public void addShotForRealMadrid(View view){
-        realmadrid.addShot();
-        this.displayRealMadridShots();
-    }
+            case R.id.rm_corners_button:
+                realmadrid.addCorner();
+                this.displayRealMadridCorners();
+                break;
 
-    /**
-     * Adds one corner for Real Madrid
-     */
-    public void addCornerForRealMadrid(View view){
-        realmadrid.addCorner();
-        this.displayRealMadridCorners();
-    }
+            case R.id.rm_shots_button:
+                realmadrid.addShot();
+                this.displayRealMadridShots();
+                break;
 
-    /**
-     * Adds one yellow card for Real Madrid
-     */
-    public void addYellowCardForRealMadrid(View view){
-        realmadrid.addYellowCard();
-        this.displayRealMadridYellowCards();
-    }
+            case R.id.rm_ycards_button:
+                realmadrid.addYellowCard();
+                this.displayRealMadridYellowCards();
+                break;
 
-    /**
-     * Adds one red card for Real Madrid
-     */
-    public void addRedCardForRealMadrid(View view){
-        realmadrid.addRedCard();
-        this.displayRealMadridRedCards();
-    }
+            case R.id.rm_rcards_button:
+                realmadrid.addRedCard();
+                this.displayRealMadridRedCards();
+                break;
 
-    /**
-     * Adds one outside for Real Madrid
-     */
-    public void addOutsideForRealMadrid(View view){
-        realmadrid.addOutside();
-        this.displayRealMadridOutsides();
-    }
+            case R.id.rm_outsides_button:
+                realmadrid.addOutside();
+                this.displayRealMadridOutsides();
+                break;
 
-    /**
-     * Resets all variables for Real Madrid
-     */
-    public void resetRealMadrid(View view){
-        realmadrid.reset();
+            case R.id.reset_button_rm:
+                realmadrid.reset();
 
-        displayRealMadridGoals();
-        displayRealMadridCorners();
-        displayRealMadridOutsides();
-        displayRealMadridYellowCards();
-        displayRealMadridRedCards();
-        displayRealMadridShots();
+                displayRealMadridGoals();
+                displayRealMadridCorners();
+                displayRealMadridOutsides();
+                displayRealMadridYellowCards();
+                displayRealMadridRedCards();
+                displayRealMadridShots();
+                break;
+
+            case R.id.ball_button_fcb:
+                barcelona.addGoal();
+                this.displayBarcelonaGoals();
+                break;
+
+            case R.id.fcb_corners_button:
+                barcelona.addCorner();
+                this.displayBarcelonaCorners();
+                break;
+
+            case R.id.fcb_shots_button:
+                barcelona.addShot();
+                this.displayBarcelonaShots();
+                break;
+
+            case R.id.barcelona_ycards_button:
+                barcelona.addYellowCard();
+                this.displayBarcelonaYellowCards();
+                break;
+
+            case R.id.barcelona_rcards_button:
+                barcelona.addRedCard();
+                this.displayBarcelonaRedCards();
+                break;
+
+            case R.id.barcelona_outsides_button:
+                barcelona.addOutside();
+                this.displayBarcelonaOutsides();
+                break;
+
+            case R.id.reset_button_fcb:
+                barcelona.reset();
+
+                displayBarcelonaGoals();
+                displayBarcelonaCorners();
+                displayBarcelonaOutsides();
+                displayBarcelonaYellowCards();
+                displayBarcelonaRedCards();
+                displayBarcelonaShots();
+                break;
+        }
     }
 
     //FC BARCELONA CODE
@@ -182,49 +207,5 @@ public class MainActivity extends AppCompatActivity {
     public void displayBarcelonaRedCards() {
         TextView scoreView = (TextView) findViewById(R.id.barcelona_rcards);
         scoreView.setText(String.valueOf(barcelona.getRedCards()));
-    }
-
-    public void addGoalForBarcelona(View view){
-        barcelona.addGoal();
-        this.displayBarcelonaGoals();
-    }
-
-    public void addShotForBarcelona(View view){
-        barcelona.addShot();
-        this.displayBarcelonaShots();
-    }
-
-    public void addCornerForBarcelona(View view){
-        barcelona.addCorner();
-        this.displayBarcelonaCorners();
-    }
-
-    public void addYellowCardForBarcelona(View view){
-        barcelona.addYellowCard();
-        this.displayBarcelonaYellowCards();
-    }
-
-    public void addRedCardForBarcelona(View view){
-        barcelona.addRedCard();
-        this.displayBarcelonaRedCards();
-    }
-
-    /**
-     * Adds one outside for Barcelona
-     */
-    public void addOutsideForBarcelona(View view){
-        barcelona.addOutside();
-        this.displayBarcelonaOutsides();
-    }
-
-    public void resetBarcelona(View view){
-        barcelona.reset();
-
-        displayBarcelonaGoals();
-        displayBarcelonaCorners();
-        displayBarcelonaOutsides();
-        displayBarcelonaYellowCards();
-        displayBarcelonaRedCards();
-        displayBarcelonaShots();
     }
 }

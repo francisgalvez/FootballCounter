@@ -27,28 +27,12 @@ public class Team {
         return outsides;
     }
 
-    public void setOutsides(int outsides){
-        this.outsides = outsides;
-    }
-
     public void addOutside(){
         outsides++;
     }
 
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
     public int getGoals() {
         return goals;
-    }
-
-    public void setGoals(int goals){
-        this.goals = goals;
     }
 
     public void addGoal() {
@@ -59,20 +43,12 @@ public class Team {
         return shots;
     }
 
-    public void setShots(int shots){
-        this.shots = shots;
-    }
-
     public void addShot() {
         shots++;
     }
 
     public int getCorners() {
         return corners;
-    }
-
-    public void setCorners(int corners){
-        this.corners = corners;
     }
 
     public void addCorner() {
@@ -83,20 +59,12 @@ public class Team {
         return yellowCards;
     }
 
-    public void setYellowCards(int yellowCards){
-        this.yellowCards = yellowCards;
-    }
-
     public void addYellowCard() {
         yellowCards++;
     }
 
     public int getRedCards() {
         return redCards;
-    }
-
-    public void setRedCards(int redCards){
-        this.redCards = redCards;
     }
 
     public void addRedCard() {
